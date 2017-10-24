@@ -1,0 +1,5 @@
+#!/bin/bash
+
+sh mvnw clean package
+docker build -f Dockerfile -t timmila/ionic-chat-client-server-postgres:latest .
+docker push timmila/ionic-chat-client-server-postgres:latest
